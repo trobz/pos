@@ -28,14 +28,40 @@ Point of Sale Order Scrap
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module extends the functionality of Point of Sale Order Return.
-
-With this module, You can move some products to scrap immediately
+This module extends the capabilities of the OCA module pos_order_return
+by adding finer control over stock for returned items. A new option "Is
+Scrap?" is introduced in the POS Partial Return Wizard. When checked,
+the system automatically creates a scrap order for the returned
+quantities of that product, improving warehouse accuracy for damaged or
+non-sellable goods.
 
 **Table of contents**
 
 .. contents::
    :local:
+
+Usage
+=====
+
+-  Go to Point of Sale and locate an existing POS Order
+
+-  Click "Partial Return"
+
+-  A popup will open |image1|
+
+-  For any product being returned as damaged or unusable:
+
+   -  Enable the checkbox "Is Scrap?"
+
+-  Confirm the return
+
+Once validated:
+
+-  Standard return processing occurs
+-  A Scrap Order is automatically created for each scrap-marked product
+   line
+
+.. |image1| image:: https://raw.githubusercontent.com/OCA/pos/18.0/pos_order_return_scrap/static/description/partial_return_scrap_form.png
 
 Bug Tracker
 ===========
@@ -59,6 +85,8 @@ Contributors
 ------------
 
 -  Trobz <https://www.trobz.com>
+
+   -  Nguyen Minh Chien <chien@trobz.com>
 
 Maintainers
 -----------
