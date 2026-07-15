@@ -1,6 +1,6 @@
 {
     "name": "POS Container Deposit",
-    "version": "16.0.1.0.1",
+    "version": "18.0.1.0.0",
     "category": "Point of Sale",
     "summary": "This module is used to manage container deposits for products"
     " in Point of Sale.",
@@ -15,11 +15,11 @@
         "demo/product_product.xml",
     ],
     "assets": {
-        "web.assets_tests": [
-            "pos_container_deposit/static/tests/tours/*.js",
+        "point_of_sale._assets_pos": [
+            "pos_container_deposit/static/src/overrides/models/**/*",
         ],
-        "point_of_sale.assets": [
-            "pos_container_deposit/static/src/js/*.js",
+        "web.assets_tests": [
+            "pos_container_deposit/static/tests/tours/**/*",
         ],
     },
     "installable": True,

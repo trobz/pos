@@ -1,7 +1,8 @@
 # Copyright 2024 Hunki Enterprises BV
+# Copyright 2026 Trobz
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo import api, fields, models
+from odoo import Command, api, fields, models
 
 
 class ProductTemplate(models.Model):
@@ -42,6 +43,21 @@ class ProductTemplate(models.Model):
 
     def _search_deposit_product_id(self, operator, value):
         return [("product_variant_ids.deposit_product_id", operator, value)]
+
+    def write(self, vals):
+        result = super().write(vals)
+        if "deposit_product_id" in vals or "pos_categ_ids" in vals:
+            self._sync_deposit_product_pos_categ_ids()
+        return result
+
+    def _sync_deposit_product_pos_categ_ids(self):
+        for record in self:
+            deposit_template = record.deposit_product_id.product_tmpl_id
+            missing_categ_ids = record.pos_categ_ids - deposit_template.pos_categ_ids
+            if deposit_template and missing_categ_ids:
+                deposit_template.pos_categ_ids = [
+                    Command.link(categ.id) for categ in missing_categ_ids
+                ]
 
     def copy(self, default=None):
         """

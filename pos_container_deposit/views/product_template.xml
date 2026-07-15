@@ -7,11 +7,11 @@
             <group name="pos" position="inside">
                 <field
                     name="is_deposit"
-                    attrs="{'invisible': ['|', '|', '|', ('deposit_product_id', '!=', False), ('sale_ok', '=', False), ('type', '=', 'service'), ('available_in_pos', '=', False)]}"
+                    invisible="deposit_product_id or not sale_ok or type == 'service' or not available_in_pos"
                 />
                 <field
                     name="deposit_product_id"
-                    attrs="{'invisible': ['|', '|', '|', '|', ('is_deposit', '!=', False), ('sale_ok', '=', False), ('type', '=', 'service'), ('available_in_pos', '=', False), '&amp;', ('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"
+                    invisible="is_deposit or not sale_ok or type == 'service' or not available_in_pos or (product_variant_count &gt; 1 and not is_product_variant)"
                 />
             </group>
         </field>
