@@ -1,7 +1,3 @@
-.. image:: https://odoo-community.org/readme-banner-image
-   :target: https://odoo-community.org/get-involved?utm_source=readme
-   :alt: Odoo Community Association
-
 =====================
 POS Container Deposit
 =====================
@@ -17,27 +13,28 @@ POS Container Deposit
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fpos-lightgray.png?logo=github
-    :target: https://github.com/OCA/pos/tree/16.0/pos_container_deposit
+    :target: https://github.com/OCA/pos/tree/18.0/pos_container_deposit
     :alt: OCA/pos
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/pos-16-0/pos-16-0-pos_container_deposit
+    :target: https://translation.odoo-community.org/projects/pos-18-0/pos-18-0-pos_container_deposit
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/pos&target_branch=16.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/pos&target_branch=18.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module allows the use of deposit products for PoS products.
 
-An example of such a deposit product would be a bottle of cola, where the bottle is
-being sold for an extra 25 cents, which you get back when you bring the bottle back to
-the store intact. Whenever the cola is added to a PoS order, the bottle is added too.
-If the cola quantity changes, the bottle quantity will change as well.
+An example of such a deposit product would be a bottle of cola, where
+the bottle is being sold for an extra 25 cents, which you get back when
+you bring the bottle back to the store intact. Whenever the cola is
+added to a PoS order, the bottle is added too. If the cola quantity
+changes, the bottle quantity will change as well.
 
 **Table of contents**
 
@@ -47,35 +44,35 @@ If the cola quantity changes, the bottle quantity will change as well.
 Use Cases / Context
 ===================
 
-Note there are several implementations of the concept of deposits with varying degrees of complexity:
+Note there are several implementations of the concept of deposits with
+varying degrees of complexity:
 
-- `product_packaging_container_deposit <https://odoo-community.org/shop/product-packaging-container-deposit-715405>`_
-- `pos_product_pack <https://odoo-community.org/shop/pos-product-pack-716088>`_
+- `product_packaging_container_deposit <https://odoo-community.org/shop/product-packaging-container-deposit-715405>`__
+- `pos_product_pack <https://odoo-community.org/shop/pos-product-pack-716088>`__
 
-This module focusses on simplicity for users who don't want to get into packaging.
+This module focusses on simplicity for users who don't want to get into
+packaging.
 
 Configuration
 =============
 
 To configure this module, you need to go to *Point of Sale > Products*.
 
-#. Select or add at least one 'deposit product', such as 'Bottle 1L',
+1. Select or add at least one 'deposit product', such as 'Bottle 1L',
    with a non-zero price and with the checkbox 'Is Deposit' set to True.
-
-#. Select or add at least one product of which 'Use Deposit' is checked,
-   such as '1 liter of cola'. In the accompanying product selection field,
-   select the bottle. The two products are now linked.
+2. Select or add at least one product of which 'Use Deposit' is checked,
+   such as '1 liter of cola'. In the accompanying product selection
+   field, select the bottle. The two products are now linked.
 
 Usage
 =====
 
 To use this module, open a POS session and:
 
-#. When a deposit product (eg. cola) is added, the bottle is added to the
-   order as well and the quantities are kept in sync.
-
-#. When someone brings back bottles to the store, you can just add a bottle
-   and enter a negative sale quantity, thus refunding the bottle.
+1. When a deposit product (eg. cola) is added, the bottle is added to
+   the order as well and the quantities are kept in sync.
+2. When someone brings back bottles to the store, you can just add a
+   bottle and enter a negative sale quantity, thus refunding the bottle.
 
 Bug Tracker
 ===========
@@ -83,7 +80,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/pos/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/pos/issues/new?body=module:%20pos_container_deposit%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/pos/issues/new?body=module:%20pos_container_deposit%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -91,22 +88,22 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Therp B.V.
 * Sunflower IT
 * Open2bizz
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-Tom Blauwendraat <tom@sunflowerweb.nl>
-Holger Brunn <mail@hunki-enterprises.com> (https://hunki-enterprises.com)
-Stefan Rijnhart <stefan@opener.am>
-Giovanni Francesco Capalbo <giovanni@therp.nl>
+Tom Blauwendraat <tom@sunflowerweb.nl> Holger Brunn
+<mail@hunki-enterprises.com> (https://hunki-enterprises.com) Stefan
+Rijnhart <stefan@opener.am> Giovanni Francesco Capalbo
+<giovanni@therp.nl>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -118,6 +115,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/pos <https://github.com/OCA/pos/tree/16.0/pos_container_deposit>`_ project on GitHub.
+This module is part of the `OCA/pos <https://github.com/OCA/pos/tree/18.0/pos_container_deposit>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

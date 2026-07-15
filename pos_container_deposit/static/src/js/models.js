@@ -136,8 +136,8 @@ odoo.define("pos_container_deposit.models", function (require) {
                         deposit_quantity
                             ? deposit_quantity
                             : quantity === "remove"
-                            ? quantity
-                            : deposit_quantity,
+                              ? quantity
+                              : deposit_quantity,
                         keep_price
                     );
                 }
