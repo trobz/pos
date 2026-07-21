@@ -5,22 +5,20 @@
     License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 -->
 <templates id="template" xml:space="preserve">
-
     <t
         t-name="pos_order_new_line.NewlineButton"
-        t-inherit="point_of_sale.ControlButtons"
+        t-inherit="point_of_sale.SelectPartnerButton"
         t-inherit-mode="extension"
     >
-        <xpath expr="//t[@t-if='props.showRemainingButtons']/div" position="inside">
+        <xpath expr="//button[hasclass('set-partner')]" position="after">
             <button
-                t-if="this.pos.get_order().get_orderlines().length !== 0"
-                t-att-class="buttonClass"
-                t-on-click="onClickNewlineButton"
+                t-if="!ui.isSmall and this.pos.config.order_add_new_line and this.pos.get_order() and this.pos.get_order().get_orderlines().length !== 0"
+                class="newline-btn btn btn-light btn-lg lh-lg flex-shrink-0"
+                t-att-class="{'highlight': this.pos.get_order().create_new_line}"
+                t-on-click="() => this.pos.toggleNewLine()"
             >
-				<i class="fa fa-plus" />
-				New Line
+                New Line
             </button>
         </xpath>
     </t>
-
 </templates>

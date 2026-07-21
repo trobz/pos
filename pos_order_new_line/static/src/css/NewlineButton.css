@@ -1,0 +1,12 @@
+.newline-btn.highlight {
+    background-color: #17a2b8 !important;
+    color: white !important;
+    border-color: #17a2b8 !important;
+    box-shadow: 0 0 8px rgba(23, 162, 184, 0.5);
+}
+
+.newline-btn.highlight:hover {
+    background-color: #138496 !important;
+    border-color: #117a8b !important;
+    box-shadow: 0 0 12px rgba(23, 162, 184, 0.7);
+}

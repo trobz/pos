@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field
+            name="name"
+        >res.config.settings.view.form.inherit.pos.order.new.line</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='pos_interface_section']" position="inside">
+                <setting
+                    string="Add New Line to Order"
+                    help="Allow cashier to create a new order line, instead of merging the quantity with a previous line"
+                >
+                    <div class="content-group">
+                        <div>
+                            <field name="pos_order_add_new_line" />
+                            <label
+                                for="pos_order_add_new_line"
+                                string="Enable New Line Button"
+                                class="fw-normal me-1"
+                            />
+                        </div>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>

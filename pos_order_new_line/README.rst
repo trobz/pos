@@ -35,10 +35,10 @@ product previously selected.
 That can be usefull, if you want to sale the same product with different
 prices and or discount. For exemple :
 
-- You sell carrots, and some carrots are quite old, and you want to
-  apply discount to a part of the products. (but not all the product)
-- You want to manually apply some discount like : "2 Coca cola sold, the
-  third will have a 10% discount".
+-  You sell carrots, and some carrots are quite old, and you want to
+   apply discount to a part of the products. (but not all the product)
+-  You want to manually apply some discount like : "2 Coca cola sold,
+   the third will have a 10% discount".
 
 **Table of contents**
 
@@ -48,14 +48,14 @@ prices and or discount. For exemple :
 Usage
 =====
 
-- Open the Point of sale
-- Select a product
-- Click on 'New line'
+-  Open the Point of sale
+-  Select a product
+-  Click on 'New line'
 
 |image1|
 
-- Select again the same product
-- A new line will be created.
+-  Select again the same product
+-  A new line will be created.
 
 .. |image1| image:: https://raw.githubusercontent.com/OCA/pos/18.0/pos_order_new_line/static/description/new_line_button.png
 
@@ -80,18 +80,18 @@ Authors
 Contributors
 ------------
 
-- Sylvain LE GAL (https://twitter.com/legalsylvain)
-- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
+-  Sylvain LE GAL (https://twitter.com/legalsylvain)
+-  `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
 
-  - Bhavesh Heliconia
+   -  Bhavesh Heliconia
 
 Other credits
 -------------
 
 The development of this module has been financially supported by:
 
-- UGESS, Union Nationale des Groupements des épiceries Sociales et
-  Solidaires (https://ugess.org/)
+-  UGESS, Union Nationale des Groupements des épiceries Sociales et
+   Solidaires (https://ugess.org/)
 
 Maintainers
 -----------

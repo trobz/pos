@@ -13,8 +13,13 @@
     "website": "https://github.com/OCA/pos",
     "license": "AGPL-3",
     "depends": ["point_of_sale"],
+    "data": [
+        "views/pos_config.xml",
+    ],
     "assets": {
         "point_of_sale._assets_pos": [
+            "pos_order_new_line/static/src/css/NewlineButton.css",
+            "pos_order_new_line/static/src/js/buttons.esm.js",
             "pos_order_new_line/static/src/js/OrderLine.esm.js",
             "pos_order_new_line/static/src/js/Order.esm.js",
             "pos_order_new_line/static/src/js/NewlineButton.esm.js",
