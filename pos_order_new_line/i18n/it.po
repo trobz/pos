@@ -1,0 +1,49 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_order_new_line
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2024-02-26 15:34+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: pos_order_new_line
+#. odoo-javascript
+#: code:addons/pos_order_new_line/static/src/xml/NewlineButton.xml:0
+#, python-format
+msgid "New Line"
+msgstr "Nuova riga"
+
+#. module: pos_order_new_line
+#: model:ir.model.fields,field_description:pos_order_new_line.field_pos_config__order_add_new_line
+msgid "Add new line to order"
+msgstr "Aggiungi nuova riga all'ordine"
+
+#. module: pos_order_new_line
+#: model:ir.model.fields,help:pos_order_new_line.field_pos_config__order_add_new_line
+msgid "If checked, a new button will be added to the POS order screen to add a new line to the current order instead of updating the existing line."
+msgstr "Se selezionato, verrà aggiunto un nuovo pulsante allo schermo dell'ordine POS per aggiungere una nuova riga all'ordine corrente invece di aggiornare la riga esistente."
+
+#. module: pos_order_new_line
+#: code:addons/pos_order_new_line/views/pos_config.xml:0
+msgid "Add New Line to Order"
+msgstr "Aggiungi nuova riga all'ordine"
+
+#. module: pos_order_new_line
+#: code:addons/pos_order_new_line/views/pos_config.xml:0
+msgid "Allow cashier to create a new order line, instead of merging the quantity with a previous line"
+msgstr "Consenti al cassiere di creare una nuova riga di ordine, invece di unire la quantità con una riga precedente"
+
+#. module: pos_order_new_line
+#: code:addons/pos_order_new_line/views/pos_config.xml:0
+msgid "Enable New Line Button"
+msgstr "Abilita pulsante Nuova riga"
