@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2023-Today GRAP (http://www.grap.coop)
+    @author Sylvain LE GAL (https://twitter.com/legalsylvain)
+    License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+-->
+<templates id="template" xml:space="preserve">
+    <t
+        t-name="pos_order_new_line.NewlineButton"
+        t-inherit="point_of_sale.SelectPartnerButton"
+        t-inherit-mode="extension"
+    >
+        <xpath expr="//button[hasclass('set-partner')]" position="after">
+            <button
+                t-if="!ui.isSmall and this.pos.config.order_add_new_line and this.pos.get_order() and this.pos.get_order().get_orderlines().length !== 0"
+                class="newline-btn btn btn-light btn-lg lh-lg flex-shrink-0"
+                t-att-class="{'highlight': this.pos.get_order().create_new_line}"
+                t-on-click="() => this.pos.toggleNewLine()"
+            >
+                New Line
+            </button>
+        </xpath>
+    </t>
+</templates>
